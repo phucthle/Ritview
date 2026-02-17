@@ -298,7 +298,7 @@
             .nav-wrapper.center .btn-delete { font-size: 16px; padding: 5px 10px; }
 			.answer-content { 
 				padding: 10px;  
-				font-size: 16px; 
+				font-size: 16px !important; 
 			}
         }
 		@media screen and (min-width: 736px) {
@@ -405,7 +405,7 @@
     <!-- DATA TABLE -->
     <div id="table-panel">
         <div class="section-header">
-            <span>DANH SÁCH TỪ VỰNG</span>
+            <span>DANH SÁCH CÂU HỎI</span>
             <div class="header-controls">
                 <!-- Filter Input -->
                 <input type="text" id="search-input" class="header-input" placeholder="🔍 Tìm kiếm (Q/A)..." oninput="handleSearch()">
@@ -1051,7 +1051,7 @@
 
                 detailWrongHTML = `
                     <div style="text-align: left; margin-top: 15px;">
-                        <strong>Các từ làm sai (đã +1 vào bộ nhớ):</strong><br>
+                        <strong>Các câu làm sai (đã +1 vào bộ nhớ):</strong><br>
                         <div style="margin-top: 10px;">${listItemsHTML}</div>
                     </div>
                 `;
