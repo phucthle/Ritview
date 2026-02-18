@@ -499,7 +499,7 @@
         function fetchCourses() {
             // [EDIT] Thay thế fetch bằng thẻ script để load courses.js
             const script = document.createElement('script');
-            script.src = 'courses.js'; // Đại ca nhớ đổi tên file courses.json -> courses.js
+            script.src = 'courses.js'; 
             
             script.onload = function() {
                 // Biến window.COURSE_LIST được định nghĩa trong file courses.js
@@ -545,7 +545,7 @@
                     currentCourseFile = fileName; 
                     // Parse text từ biến toàn cục
                     vocabulary = parseMarkdownTable(window.COURSE_DATA);
-                    
+                    delete window.COURSE_DATA;
                     currentPage = 1;
                     renderTable();
                     updateDashboard();
@@ -555,7 +555,7 @@
             };
 
             script.onerror = function() {
-                alert("Không tải được file dữ liệu: " + fileName + "\nĐại ca nhớ đổi đuôi .md/.txt thành .js và sửa nội dung nhé!");
+                alert("Không tải được file dữ liệu: " + fileName + "\nĐại ca nhớ đổi đuôi .txt thành .js và sửa nội dung nhé!");
             };
 
             document.head.appendChild(script);
